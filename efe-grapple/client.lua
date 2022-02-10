@@ -239,7 +239,8 @@ end)
                exports['qb-drawtext']:DrawText('[E] Grapple','left') 
         elseif shownGrappleButton and (not freeAiming or hit ~= 1) then
           shownGrappleButton = false
-          exports["aw3-ui"]:hideInteraction()
+          --exports["aw3-ui"]:hideInteraction() 
+                exports['qb-drawtext']:HideText()
         end
         if IsControlJustReleased(0, 51) and freeAiming and grappleGunEquipped then
           hit, pos, _, _ = GrappleCurrentAimPoint(4000)

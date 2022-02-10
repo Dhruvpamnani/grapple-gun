@@ -1,4 +1,7 @@
 it's a standalone grapple-gun 
-take  heavysniper_mk2 and use /grapple command then use it 
+take  weapon_heavysniper_mk2 and use /grapple command then use it 
 
-converting to qb-drawtext
+converted to qb-drawtext
+
+
+qb-drawtext :- https://github.com/IdrisDose/qb-drawtext

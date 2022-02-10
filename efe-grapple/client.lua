@@ -235,16 +235,19 @@ end)
         if not shownGrappleButton and freeAiming and hit == 1 then
           shownGrappleButton = true
           Citizen.Wait(250)
-          exports["aw3-ui"]:showInteraction('[E] Grapple!', 'inform')
+          --exports["aw3-ui"]:showInteraction('[E] Grapple!', 'inform') 
+               exports['qb-drawtext']:DrawText('[E] Grapple','left') 
         elseif shownGrappleButton and (not freeAiming or hit ~= 1) then
           shownGrappleButton = false
           exports["aw3-ui"]:hideInteraction()
         end
         if IsControlJustReleased(0, 51) and freeAiming and grappleGunEquipped then
           hit, pos, _, _ = GrappleCurrentAimPoint(4000)
-          exports["aw3-ui"]:hideInteraction()
+          --exports["aw3-ui"]:hideInteraction()
+                exports['qb-drawtext']:HideText()
           if hit == 1 then
-            exports["aw3-ui"]:hideInteraction()
+             --exports["aw3-ui"]:hideInteraction() 
+                  exports['qb-drawtext']:HideText()
             grappleGunEquipped = false
             -- mCore.functions.playSound('grapple', 0.5)
             Citizen.Wait(50)
